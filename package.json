@@ -1,0 +1,16 @@
+{
+  "name": "contact-partners",
+  "version": "1.0.0",
+  "description": "Contact partners app for Webbio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": ""
+  },
+  "author": "Roy Honders",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "dotenv": "^8.0.0"
+  }
+}
