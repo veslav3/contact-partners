@@ -17,6 +17,11 @@ const readPartnerList = (fileLocation) => {
     return partners
 }
 
+const writePartnerList = (partners, fileLocation) => {
+    fs.writeFileSync(fileLocation, JSON.stringify(partners))
+}
+
 module.exports = {
-    readPartnerList
+    readPartnerList,
+    writePartnerList
 }
