@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const Partner = require('../models/partner')
 
-const readPartnerList = async (fileLocation) => {
+const readPartnerList = (fileLocation) => {
     const partners = []
 
     const readPartners = fs.readFileSync(fileLocation)
