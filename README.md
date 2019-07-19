@@ -39,6 +39,6 @@ npm run test-coverage
 - [x] Sort list by name.
 - [ ] Get hired by Webbio. TODO: @Joeri & @Jordy
 
-## Potential alternatives:
+## Potential alternative solution(s):
 
 Creating a circle 75km around the office and using geospacial methods to calculate if the locations are within the circular shape.
