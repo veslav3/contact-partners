@@ -13,13 +13,20 @@ const WEBBIO_LOCATION = {
 
 const main = async () => {
     const partners = await readPartnerList('./data/partners.json')
+
     await GoogleGeocoding.instance.findPartnerLocations(partners)
+
     const filteredPartners = partners.filter(p => {
         return Checks.isDistanceSmallerThan75KM(WEBBIO_LOCATION, p.location)
     })
+    
     writePartnerList(filteredPartners, './data/result.json')
 }
 
 if (require.main === module) {
-    main()
+    try {
+        main()
+    } catch(err) {
+        console.error(err)
+    }
 }

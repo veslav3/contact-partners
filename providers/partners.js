@@ -18,6 +18,8 @@ const readPartnerList = (fileLocation) => {
 }
 
 const writePartnerList = (partners, fileLocation) => {
+    partners.sort((a, b) => a.name > b.name)
+
     fs.writeFileSync(fileLocation, JSON.stringify(partners))
 }
 
