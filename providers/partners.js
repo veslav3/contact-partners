@@ -1,13 +1,13 @@
 'use strict'
 
-const fs = require('fs')
+const Fs = require('fs')
 
 const Partner = require('../models/partner')
 
 const readPartnerList = (fileLocation) => {
     const partners = []
 
-    const readPartners = fs.readFileSync(fileLocation)
+    const readPartners = Fs.readFileSync(fileLocation)
     const parsed = JSON.parse(readPartners)
 
     parsed.forEach(p => {
@@ -20,7 +20,7 @@ const readPartnerList = (fileLocation) => {
 const writePartnerList = (partners, fileLocation) => {
     partners.sort((a, b) => a.name > b.name)
 
-    fs.writeFileSync(fileLocation, JSON.stringify(partners))
+    Fs.writeFileSync(fileLocation, JSON.stringify(partners))
 }
 
 module.exports = {

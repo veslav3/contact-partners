@@ -1,6 +1,6 @@
 'use strict'
 
-const fs = require('fs')
+const Fs = require('fs')
 
 const Partner = require('../../models/partner')
 const { readPartnerList, writePartnerList } = require('../../providers/partners')
@@ -20,14 +20,14 @@ test('Write to file correctly', () => {
 
         writePartnerList(partners.slice(), `${__dirname}/../data/test2.json`)
 
-        const input = JSON.parse(fs.readFileSync(`${__dirname}/../data/test2.json`))
+        const input = JSON.parse(Fs.readFileSync(`${__dirname}/../data/test2.json`))
         const expected = JSON.stringify(partners)
 
         expect(JSON.stringify(input)).toEqual(expected)
     } catch (err) {
         console.log(err)
     } finally {
-        fs.unlinkSync(`${__dirname}/../data/test2.json`)
+        Fs.unlinkSync(`${__dirname}/../data/test2.json`)
     }
 })
 

@@ -1,7 +1,5 @@
 'use strict'
 
-const fs = require('fs')
-
 const Partner = require('../../models/partner')
 const GoogleGeocoding = require('../../providers/google-geocoding')
 

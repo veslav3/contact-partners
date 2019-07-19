@@ -1,12 +1,12 @@
 'use strict'
 
-const googleMapsClient = require('@google/maps')
+const GoogleMapsClient = require('@google/maps')
 
 let currentInstance
 
 class GoogleGeocoding {
     constructor(API_KEY) {
-        this.client = googleMapsClient.createClient({
+        this.client = GoogleMapsClient.createClient({
             key: API_KEY,
             Promise: Promise
         });
