@@ -37,7 +37,6 @@ npm run test-coverage
 - [x] Create a function that can validate that the points are not too far (75km) away.
 - [x] Return a list of partners that are less than 75km away in a new JSON file.
 - [x] Sort list by name.
-- [ ] Get hired by Webbio. TODO: @Joeri & @Jordy
 
 ## Potential alternative solution(s):
 
