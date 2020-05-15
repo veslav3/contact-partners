@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
-const GoogleMapsClient = require('@google/maps')
+const GoogleMapsClient = require('@google/maps');
 
-let currentInstance
+let currentInstance;
 
 class GoogleGeocoding {
     constructor(API_KEY) {
@@ -19,14 +19,14 @@ class GoogleGeocoding {
 
     async findPartnerLocations(partners) {
         for (const p of partners) {
-            const call = await this.getLocation(this.extractAdress(p))
-            const location = call.json.results[0].geometry.location
+            const call = await this.getLocation(this.extractAdress(p));
+            const location = call.json.results[0].geometry.location;
             p.addLocation(location)
         }
     }
 
     extractAdress(partner) {
-        const {street, no, city, country} = partner.address
+        const {street, no, city, country} = partner.address;
 
         return `${street} ${no}, ${city}, ${country}`
     }
@@ -39,4 +39,4 @@ class GoogleGeocoding {
     }
 }
 
-module.exports = GoogleGeocoding
+module.exports = GoogleGeocoding;

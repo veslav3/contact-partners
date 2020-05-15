@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
-const GeojsonUtils = require('geojson-utils')
+const GeojsonUtils = require('geojson-utils');
 
-const MAX_DISTANCE_IN_METERS = 75000
+const MAX_DISTANCE_IN_METERS = 75000;
 
 const isDistanceSmallerThan75KM = (point1, point2) => {
     const distance = GeojsonUtils.pointDistance(
@@ -14,11 +14,11 @@ const isDistanceSmallerThan75KM = (point1, point2) => {
             'type': 'Point',
             'coordinates': [point2.lng, point2.lat]
         }
-    )
+    );
 
     return distance <= MAX_DISTANCE_IN_METERS
-}
+};
 
 module.exports = {
     isDistanceSmallerThan75KM
-}
+};

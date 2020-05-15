@@ -1,10 +1,10 @@
-'use strict'
+'use strict';
 
 class Partner {
     constructor(name, address) {
-        this.name = name
-        this.address = address
-        this.location = null
+        this.name = name;
+        this.address = address;
+        this.location = null;
     }
 
     addLocation(location) {
@@ -12,4 +12,4 @@ class Partner {
     }
 }
 
-module.exports = Partner
+module.exports = Partner;

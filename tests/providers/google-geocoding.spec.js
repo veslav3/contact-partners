@@ -1,13 +1,13 @@
-'use strict'
+'use strict';
 
-const Partner = require('../../models/partner')
-const GoogleGeocoding = require('../../providers/google-geocoding')
+const Partner = require('../../models/partner');
+const GoogleGeocoding = require('../../providers/google-geocoding');
 
 test('Expect address to be constructed correctly.', () => {
     expect(
         GoogleGeocoding.instance.extractAdress(partner)
     ).toBe('Hagmolenbeekweg 185, Enschede, The Netherlands')
-})
+});
 
 const partner = new Partner("Wavetech",
     {
@@ -16,4 +16,4 @@ const partner = new Partner("Wavetech",
         "city": "Enschede",
         "country": "The Netherlands"
     }
-)
+);
